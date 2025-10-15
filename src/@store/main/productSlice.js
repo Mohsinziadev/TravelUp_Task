@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/axios";
 import {
   sampleProducts,
@@ -10,39 +10,38 @@ const initialState = {
   loading: false,
   products: [],
   metadata: {},
+  error: null,
+  success: null,
+  editingProduct: null,
 };
 
-export const getProducts =
-  (limit, page, category, search) => async (dispatch) => {
-    let url = `/products?limit=${limit}&page=${page}`;
-    if (search) {
-      url = `${url}&search=${search}`;
-    }
-    if (category) {
-      url = `${url}&category=${category}`;
-    }
-    dispatch(setLoading(true));
-
+// Async thunks for CRUD operations
+export const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
+  async (
+    { limit = 10, page = 0, category = "", search = "" },
+    { rejectWithValue }
+  ) => {
     try {
-      const res = await axiosInstance.get(url);
-      let apiProducts = res.data.products || res.data;
-
-      if (!Array.isArray(apiProducts)) {
-        apiProducts = [];
+      let url = `/products?_page=${page + 1}&_limit=${limit}`;
+      if (search) {
+        url += `&q=${search}`;
+      }
+      if (category && category !== "All") {
+        url += `&category=${category}`;
       }
 
-      dispatch(
-        setProducts({
-          products: apiProducts,
-          metadata: res.data.metadata || {
-            total: apiProducts.length,
-            page: page,
-          },
-        })
-      );
-    } catch (errors) {
-      console.log("API Error, using sample data:", errors);
-
+      const response = await axiosInstance.get(url);
+      return {
+        products: response.data,
+        metadata: {
+          total:
+            parseInt(response.headers["x-total-count"]) || response.data.length,
+          page: page,
+          limit: limit,
+        },
+      };
+    } catch (error) {
       // Fallback to sample data
       let filteredProducts = sampleProducts;
 
@@ -59,19 +58,61 @@ export const getProducts =
       const endIndex = startIndex + limit;
       const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
-      dispatch(
-        setProducts({
-          products: paginatedProducts,
-          metadata: {
-            total: filteredProducts.length,
-            page: page,
-            limit: limit,
-          },
-        })
-      );
-    } finally {
-      dispatch(setLoading(false));
+      return {
+        products: paginatedProducts,
+        metadata: {
+          total: filteredProducts.length,
+          page: page,
+          limit: limit,
+        },
+      };
     }
+  }
+);
+
+export const addProduct = createAsyncThunk(
+  "products/addProduct",
+  async (productData, { rejectWithValue }) => {
+    try {
+      const response = await axiosInstance.post("/products", {
+        ...productData,
+        created_at: new Date().toISOString(),
+      });
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || error.message);
+    }
+  }
+);
+
+export const updateProduct = createAsyncThunk(
+  "products/updateProduct",
+  async ({ id, productData }, { rejectWithValue }) => {
+    try {
+      const response = await axiosInstance.put(`/products/${id}`, productData);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || error.message);
+    }
+  }
+);
+
+export const deleteProduct = createAsyncThunk(
+  "products/deleteProduct",
+  async (id, { rejectWithValue }) => {
+    try {
+      await axiosInstance.delete(`/products/${id}`);
+      return id;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || error.message);
+    }
+  }
+);
+
+// Legacy function for backward compatibility
+export const getProducts =
+  (limit, page, category, search) => async (dispatch) => {
+    dispatch(fetchProducts({ limit, page, category, search }));
   };
 
 export const productSlice = createSlice({
@@ -85,9 +126,100 @@ export const productSlice = createSlice({
       state.products = action.payload.products;
       state.metadata = action.payload.metadata;
     },
+    clearMessages: (state) => {
+      state.error = null;
+      state.success = null;
+    },
+    setEditingProduct: (state, action) => {
+      state.editingProduct = action.payload;
+    },
+    clearEditingProduct: (state) => {
+      state.editingProduct = null;
+    },
+  },
+  extraReducers: (builder) => {
+    // Fetch products
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products = action.payload.products;
+        state.metadata = action.payload.metadata;
+        state.error = null;
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // Add product
+      .addCase(addProduct.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.success = null;
+      })
+      .addCase(addProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products.unshift(action.payload);
+        state.success = "Product added successfully!";
+        state.error = null;
+      })
+      .addCase(addProduct.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to add product";
+      })
+
+      // Update product
+      .addCase(updateProduct.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.success = null;
+      })
+      .addCase(updateProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        const index = state.products.findIndex(
+          (p) => p.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.products[index] = action.payload;
+        }
+        state.success = "Product updated successfully!";
+        state.error = null;
+        state.editingProduct = null;
+      })
+      .addCase(updateProduct.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to update product";
+      })
+
+      // Delete product
+      .addCase(deleteProduct.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.success = null;
+      })
+      .addCase(deleteProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products = state.products.filter((p) => p.id !== action.payload);
+        state.success = "Product deleted successfully!";
+        state.error = null;
+      })
+      .addCase(deleteProduct.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Failed to delete product";
+      });
   },
 });
 
-export const { setLoading, setProducts } = productSlice.actions;
+export const {
+  setLoading,
+  setProducts,
+  clearMessages,
+  setEditingProduct,
+  clearEditingProduct,
+} = productSlice.actions;
 
 export default productSlice.reducer;

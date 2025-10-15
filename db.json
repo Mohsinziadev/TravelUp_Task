@@ -1,0 +1,384 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Modern Downtown Apartment",
+      "location": "Manhattan, NY",
+      "sqft": 1200,
+      "bedroom": 2,
+      "bath": 2,
+      "price": 7500,
+      "details": "Beautiful modern apartment with floor-to-ceiling windows, hardwood floors, and a private balcony. Located in the heart of Manhattan with easy access to public transportation.",
+      "category": "Apartment",
+      "brand": "Premium Properties",
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Luxury Suburban Villa",
+      "location": "Beverly Hills, CA",
+      "sqft": 3500,
+      "bedroom": 4,
+      "bath": 3,
+      "price": 22000,
+      "details": "Stunning luxury villa featuring a gourmet kitchen, marble bathrooms, and a beautiful swimming pool. Located in one of the most prestigious neighborhoods.",
+      "category": "Villa",
+      "brand": "Elite Realty",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-14T14:20:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Cozy Family Home",
+      "location": "Austin, TX",
+      "sqft": 1800,
+      "bedroom": 3,
+      "bath": 2,
+      "price": 4850,
+      "details": "Perfect family home with a spacious backyard, updated kitchen, and charming neighborhood. Great schools nearby and close to downtown Austin.",
+      "category": "House",
+      "brand": "Family First Realty",
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-13T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Beachfront Condo",
+      "location": "Miami Beach, FL",
+      "sqft": 950,
+      "bedroom": 1,
+      "bath": 1,
+      "price": 6500,
+      "details": "Stunning beachfront condo with panoramic ocean views, modern amenities, and direct beach access. Perfect for vacation rental or primary residence.",
+      "category": "Condo",
+      "brand": "Ocean Properties",
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-12T16:45:00Z"
+    },
+    {
+      "id": "5",
+      "name": "Historic Townhouse",
+      "location": "Charleston, SC",
+      "sqft": 2400,
+      "bedroom": 3,
+      "bath": 2,
+      "price": 8750,
+      "details": "Beautifully restored historic townhouse featuring original hardwood floors, crown molding, and a private courtyard. Located in the historic district.",
+      "category": "Townhouse",
+      "brand": "Historic Properties",
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-11T11:20:00Z"
+    },
+    {
+      "id": "6",
+      "name": "Modern Loft",
+      "location": "Chicago, IL",
+      "sqft": 1600,
+      "bedroom": 2,
+      "bath": 2,
+      "price": 4250,
+      "details": "Stylish converted loft with exposed brick walls, high ceilings, and industrial design elements. Located in the trendy arts district.",
+      "category": "Loft",
+      "brand": "Urban Living",
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-10T08:30:00Z"
+    },
+    {
+      "id": "7",
+      "name": "Mountain Cabin",
+      "location": "Aspen, CO",
+      "sqft": 1400,
+      "bedroom": 2,
+      "bath": 2,
+      "price": 12000,
+      "details": "Charming mountain cabin with stunning views, stone fireplace, and private hot tub. Perfect for ski season or year-round mountain living.",
+      "category": "Cabin",
+      "brand": "Mountain Properties",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-09T15:45:00Z"
+    },
+    {
+      "id": "8",
+      "name": "Penthouse Suite",
+      "location": "San Francisco, CA",
+      "sqft": 2800,
+      "bedroom": 3,
+      "bath": 3,
+      "price": 35000,
+      "details": "Luxury penthouse with panoramic city views, private terrace, and premium finishes throughout. Located in the heart of downtown San Francisco.",
+      "category": "Penthouse",
+      "brand": "Luxury Living",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-08T12:10:00Z"
+    },
+    {
+      "id": "9",
+      "name": "Garden Cottage",
+      "location": "Portland, OR",
+      "sqft": 1100,
+      "bedroom": 2,
+      "bath": 1,
+      "price": 3750,
+      "details": "Adorable cottage with a beautiful garden, updated kitchen, and vintage charm. Perfect for first-time buyers or downsizing.",
+      "category": "Cottage",
+      "brand": "Garden Homes",
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-07T10:25:00Z"
+    },
+    {
+      "id": "10",
+      "name": "Waterfront Estate",
+      "location": "Seattle, WA",
+      "sqft": 4200,
+      "bedroom": 5,
+      "bath": 4,
+      "price": 18500,
+      "details": "Magnificent waterfront estate with private dock, wine cellar, and home theater. Breathtaking views of Puget Sound and Olympic Mountains.",
+      "category": "Estate",
+      "brand": "Waterfront Properties",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-06T14:50:00Z"
+    },
+    {
+      "id": "11",
+      "name": "Studio Apartment",
+      "location": "Boston, MA",
+      "sqft": 550,
+      "bedroom": 0,
+      "bath": 1,
+      "price": 32530,
+      "details": "Efficient studio apartment with modern amenities, in-unit laundry, and access to building gym and rooftop deck. Perfect for young professionals.",
+      "category": "Studio",
+      "brand": "Urban Spaces",
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-05T16:30:00Z"
+    },
+    {
+      "id": "12",
+      "name": "Ranch Style Home",
+      "location": "Phoenix, AZ",
+      "sqft": 2200,
+      "bedroom": 4,
+      "bath": 2,
+      "price": 4850,
+      "details": "Single-story ranch home with open floor plan, covered patio, and desert landscaping. Great for families with easy maintenance.",
+      "category": "Ranch",
+      "brand": "Desert Homes",
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-04T11:15:00Z"
+    },
+    {
+      "id": "13",
+      "name": "Lake House",
+      "location": "Lake Tahoe, CA",
+      "sqft": 2600,
+      "bedroom": 4,
+      "bath": 3,
+      "price": 9500,
+      "details": "Beautiful lake house with private beach access, boat dock, and stunning mountain views. Perfect for year-round recreation and relaxation.",
+      "category": "Lake House",
+      "brand": "Lake Properties",
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-03T13:40:00Z"
+    },
+    {
+      "id": "14",
+      "name": "Duplex Unit",
+      "location": "Denver, CO",
+      "sqft": 1350,
+      "bedroom": 3,
+      "bath": 2,
+      "price": 42500,
+      "details": "Well-maintained duplex unit with private entrance, attached garage, and small yard. Great investment opportunity or starter home.",
+      "category": "Duplex",
+      "brand": "Investment Properties",
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-02T09:20:00Z"
+    },
+    {
+      "id": "15",
+      "name": "Modern Townhouse",
+      "location": "Atlanta, GA",
+      "sqft": 1900,
+      "bedroom": 3,
+      "bath": 2,
+      "price": 3950,
+      "details": "Contemporary townhouse with modern finishes, two-car garage, and community amenities including pool and fitness center.",
+      "category": "Townhouse",
+      "brand": "Modern Living",
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2024-01-01T15:55:00Z"
+    },
+    {
+      "id": "16",
+      "name": "Farmhouse",
+      "location": "Nashville, TN",
+      "sqft": 3200,
+      "bedroom": 4,
+      "bath": 3,
+      "price": 6750,
+      "details": "Charming farmhouse with original hardwood floors, wrap-around porch, and 2-acre lot. Perfect for those seeking country living with city access.",
+      "category": "Farmhouse",
+      "brand": "Country Properties",
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2023-12-31T12:30:00Z"
+    },
+    {
+      "id": "17",
+      "name": "High-Rise Condo",
+      "location": "Las Vegas, NV",
+      "sqft": 1100,
+      "bedroom": 2,
+      "bath": 2,
+      "price": 2850,
+      "details": "Luxury high-rise condo with strip views, resort-style amenities, and 24/7 concierge service. Perfect for entertainment and nightlife.",
+      "category": "Condo",
+      "brand": "Vegas Properties",
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2023-12-30T14:15:00Z"
+    },
+    {
+      "id": "18",
+      "name": "Colonial House",
+      "location": "Philadelphia, PA",
+      "sqft": 2800,
+      "bedroom": 4,
+      "bath": 3,
+      "price": 5250,
+      "details": "Beautiful colonial home with original architectural details, updated kitchen, and spacious backyard. Located in historic neighborhood.",
+      "category": "Colonial",
+      "brand": "Historic Homes",
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2023-12-29T10:45:00Z"
+    },
+    {
+      "id": "19",
+      "name": "Tiny House",
+      "location": "Portland, OR",
+      "sqft": 400,
+      "bedroom": 1,
+      "bath": 1,
+      "price": 1250,
+      "details": "Eco-friendly tiny house with modern amenities, loft bedroom, and efficient use of space. Perfect for minimalist living and sustainability.",
+      "category": "Tiny House",
+      "brand": "Sustainable Living",
+      "rating": 4.1,
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2023-12-28T08:20:00Z"
+    },
+    {
+      "id": "20",
+      "name": "Mansion Estate",
+      "location": "Malibu, CA",
+      "sqft": 8500,
+      "bedroom": 8,
+      "bath": 7,
+      "price": 12508,
+      "details": "Stunning oceanfront mansion with infinity pool, home theater, wine cellar, and private beach access. Ultimate luxury living with panoramic ocean views.",
+      "category": "Mansion",
+      "brand": "Ultra Luxury",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ],
+      "created_at": "2023-12-27T16:00:00Z"
+    }
+  ]
+}
