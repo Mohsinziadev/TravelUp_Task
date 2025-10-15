@@ -8,6 +8,7 @@ import {
 
 const initialState = {
   loading: false,
+  initialLoading: false,
   products: [],
   metadata: {},
   error: null,
@@ -15,7 +16,6 @@ const initialState = {
   editingProduct: null,
 };
 
-// Async thunks for CRUD operations
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (
@@ -42,7 +42,6 @@ export const fetchProducts = createAsyncThunk(
         },
       };
     } catch (error) {
-      // Fallback to sample data
       let filteredProducts = sampleProducts;
 
       if (category && category !== "All") {
@@ -50,10 +49,9 @@ export const fetchProducts = createAsyncThunk(
       }
 
       if (search) {
-        filteredProducts = searchProducts(search);
+        filteredProducts = searchProducts(search, filteredProducts);
       }
 
-      // Apply pagination to sample data
       const startIndex = page * limit;
       const endIndex = startIndex + limit;
       const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
@@ -122,6 +120,9 @@ export const productSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
+    setInitialLoading: (state, action) => {
+      state.initialLoading = action.payload;
+    },
     setProducts: (state, action) => {
       state.products = action.payload.products;
       state.metadata = action.payload.metadata;
@@ -138,7 +139,6 @@ export const productSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    // Fetch products
     builder
       .addCase(fetchProducts.pending, (state) => {
         state.loading = true;
@@ -172,7 +172,6 @@ export const productSlice = createSlice({
         state.error = action.payload || "Failed to add product";
       })
 
-      // Update product
       .addCase(updateProduct.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -195,7 +194,6 @@ export const productSlice = createSlice({
         state.error = action.payload || "Failed to update product";
       })
 
-      // Delete product
       .addCase(deleteProduct.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -216,6 +214,7 @@ export const productSlice = createSlice({
 
 export const {
   setLoading,
+  setInitialLoading,
   setProducts,
   clearMessages,
   setEditingProduct,

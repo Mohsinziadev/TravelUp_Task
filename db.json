@@ -1,23 +1,19 @@
 {
   "products": [
     {
-      "id": "1",
       "name": "Modern Downtown Apartment",
-      "location": "Manhattan, NY",
-      "sqft": 1200,
-      "bedroom": 2,
-      "bath": 2,
-      "price": 7500,
-      "details": "Beautiful modern apartment with floor-to-ceiling windows, hardwood floors, and a private balcony. Located in the heart of Manhattan with easy access to public transportation.",
+      "title": "",
+      "description": "Mohsin zia test Description",
+      "price": 7550,
       "category": "Apartment",
-      "brand": "Premium Properties",
+      "brand": "Mohsin zia ",
       "rating": 4.8,
       "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "images": [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       ],
-      "created_at": "2024-01-15T10:30:00Z"
+      "id": "1"
     },
     {
       "id": "2",

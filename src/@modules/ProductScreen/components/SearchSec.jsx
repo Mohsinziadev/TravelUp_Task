@@ -13,6 +13,7 @@ const SearchSec = (props) => {
               <input
                 type="text"
                 placeholder="Search travel products..."
+                value={search}
                 className="w-full px-2 transform transition  duration-500 hover:scale-y-110  py-2 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-gradient-to-r from-[#3BA9CA]  to-[#ff7fce] focus:outline-none "
                 onChange={(e) => setSearch(e.target.value)}
               />

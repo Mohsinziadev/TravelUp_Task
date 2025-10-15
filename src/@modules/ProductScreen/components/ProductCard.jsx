@@ -75,7 +75,7 @@ const ProductCard = (props) => {
       onMouseEnter={() => setShowActions(true)}
       onMouseLeave={() => setShowActions(false)}
     >
-      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 relative">
+      <div className="h-full bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 relative">
         {showActions && (
           <div className="absolute top-2 left-2 z-10 flex space-x-2">
             <button
@@ -136,8 +136,8 @@ const ProductCard = (props) => {
         </div>
 
         {/* Content Section */}
-        <div className="p-4 flex flex-col h-full">
-          <div className="flex-grow">
+        <div className="p-4  flex flex-col h-full">
+          <div className="">
             {/* Title and Location */}
             <div className="mb-3">
               <h3 className="text-lg font-semibold text-gray-900 mb-1 line-clamp-1">

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "./components/ProductCard";
 import SearchSec from "./components/SearchSec";
 import ProductForm from "./components/ProductForm";
-import DeleteConfirmModal from "./components/DeleteConfirmModal";
 import ReactPaginate from "react-paginate";
 import PaginationLoader from "./components/PaginationLoader";
 import ProductSkeltonLoader from "./components/ProductSkeltonLoader";
@@ -12,6 +11,7 @@ import {
   getProducts,
   clearMessages,
   clearEditingProduct,
+  setInitialLoading,
 } from "../../@store/main/productSlice";
 import useDebounce from "../../@customHooks/useDebounce";
 
@@ -19,6 +19,7 @@ const limit = 10;
 const Product = () => {
   const {
     loading: productsLoading,
+    initialLoading,
     products,
     metadata,
     editingProduct,
@@ -38,6 +39,7 @@ const Product = () => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [notificationType, setNotificationType] = useState("success");
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
     setPageNumber(0);
@@ -47,7 +49,18 @@ const Product = () => {
     dispatch(getProducts(limit, pageNumber, selectedCategory, debouncedSearch));
   }, [dispatch, debouncedSearch, pageNumber, selectedCategory]);
 
-  // Handle notifications
+  useEffect(() => {
+    if (isFirstLoad) {
+      dispatch(setInitialLoading(true));
+      const timer = setTimeout(() => {
+        dispatch(setInitialLoading(false));
+        setIsFirstLoad(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [dispatch, isFirstLoad]);
+
   useEffect(() => {
     if (success || error) {
       setNotificationType(error ? "error" : "success");
@@ -55,7 +68,6 @@ const Product = () => {
     }
   }, [success, error]);
 
-  // Handle editing product modal
   useEffect(() => {
     if (editingProduct) {
       setShowAddModal(true);
@@ -113,7 +125,7 @@ const Product = () => {
       <div className="flex flex-col md:flex-row gap-4 mt-10 px-2">
         <div className="w-full">
           <div>
-            {productsLoading ? (
+            {initialLoading || productsLoading ? (
               <div>
                 <ProductSkeltonLoader />
               </div>
@@ -138,7 +150,7 @@ const Product = () => {
             )}
           </div>
           <div className="mt-4">
-            {productsLoading ? (
+            {initialLoading || productsLoading ? (
               <>
                 <PaginationLoader />
               </>
@@ -162,14 +174,12 @@ const Product = () => {
         </div>
       </div>
 
-      {/* Modals */}
       <ProductForm
         isOpen={showAddModal}
         onClose={handleCloseAddModal}
         editingProduct={editingProduct}
       />
 
-      {/* Notification */}
       <Notification
         message={success || error}
         type={notificationType}

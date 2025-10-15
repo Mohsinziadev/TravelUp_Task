@@ -1,4 +1,3 @@
-// Sample travel products data for development and testing
 export const sampleProducts = [
   {
     id: 1,
@@ -460,7 +459,6 @@ export const sampleProducts = [
   },
 ];
 
-// Helper function to get products by category
 export const getProductsByCategory = (category) => {
   if (!category || category === "All") {
     return sampleProducts;
@@ -468,16 +466,16 @@ export const getProductsByCategory = (category) => {
   return sampleProducts.filter((product) => product.category === category);
 };
 
-// Helper function to search products
-export const searchProducts = (query) => {
+export const searchProducts = (query, productsToSearch = sampleProducts) => {
   if (!query) {
-    return sampleProducts;
+    return productsToSearch;
   }
   const lowercaseQuery = query.toLowerCase();
-  return sampleProducts.filter(
+  return productsToSearch.filter(
     (product) =>
       product.name.toLowerCase().includes(lowercaseQuery) ||
       product.description.toLowerCase().includes(lowercaseQuery) ||
-      product.category.toLowerCase().includes(lowercaseQuery)
+      product.category.toLowerCase().includes(lowercaseQuery) ||
+      product.brand?.toLowerCase().includes(lowercaseQuery)
   );
 };

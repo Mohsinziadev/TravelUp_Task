@@ -14,9 +14,6 @@ function Footer() {
                   className="object-contain h-[5rem] w-[6rem]"
                   alt="TravelUp Logo"
                 />
-                {/* <span className="text-lg font-bold text-primary mt-2">
-                  TravelUp
-                </span> */}
               </div>
             </div>
             <div className="w-full md:w-2/4 ">
