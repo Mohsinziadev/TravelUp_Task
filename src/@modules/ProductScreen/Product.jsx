@@ -55,7 +55,7 @@ const Product = () => {
       const timer = setTimeout(() => {
         dispatch(setInitialLoading(false));
         setIsFirstLoad(false);
-      }, 3000);
+      }, 3500);
 
       return () => clearTimeout(timer);
     }
