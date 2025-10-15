@@ -1,0 +1,483 @@
+// Sample travel products data for development and testing
+export const sampleProducts = [
+  {
+    id: 1,
+    name: "Luxury Beach Resort Package",
+    title: "Luxury Beach Resort Package",
+    description:
+      "Experience the ultimate luxury beach getaway with our premium resort package. Includes 5-star accommodation, all meals, spa treatments, and exclusive beach access.",
+    price: 1299,
+    category: "Luxury",
+    brand: "TravelUp Premium",
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-15T10:00:00Z",
+  },
+  {
+    id: 2,
+    name: "Adventure Mountain Trek",
+    title: "Adventure Mountain Trek",
+    description:
+      "Conquer the peaks with our guided mountain trekking adventure. Perfect for thrill-seekers looking for an unforgettable outdoor experience.",
+    price: 599,
+    category: "Adventure",
+    brand: "TravelUp Adventure",
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464822759844-d150baec76e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-10T14:30:00Z",
+  },
+  {
+    id: 3,
+    name: "Cultural City Tour",
+    title: "Cultural City Tour",
+    description:
+      "Immerse yourself in local culture with our comprehensive city tour. Visit historical landmarks, taste local cuisine, and meet friendly locals.",
+    price: 299,
+    category: "Cultural",
+    brand: "TravelUp Cultural",
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-08T09:15:00Z",
+  },
+  {
+    id: 4,
+    name: "Budget Backpacker's Guide",
+    title: "Budget Backpacker's Guide",
+    description:
+      "Explore the world on a budget with our comprehensive backpacker's guide. Tips, tricks, and itineraries for budget-conscious travelers.",
+    price: 99,
+    category: "Budget",
+    brand: "TravelUp Budget",
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-05T16:45:00Z",
+  },
+  {
+    id: 5,
+    name: "Tropical Island Paradise",
+    title: "Tropical Island Paradise",
+    description:
+      "Escape to a tropical paradise with pristine beaches, crystal clear waters, and endless sunshine. Perfect for relaxation and water activities.",
+    price: 899,
+    category: "Beach",
+    brand: "TravelUp Paradise",
+    rating: 4.9,
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-12T11:20:00Z",
+  },
+  {
+    id: 6,
+    name: "Mountain Retreat Experience",
+    title: "Mountain Retreat Experience",
+    description:
+      "Find peace and tranquility in our mountain retreat. Enjoy breathtaking views, fresh mountain air, and complete relaxation.",
+    price: 699,
+    category: "Mountain",
+    brand: "TravelUp Retreat",
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464822759844-d150baec76e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-18T13:10:00Z",
+  },
+  // Hotel Room Booking Products
+  {
+    id: 7,
+    name: "Deluxe Ocean View Suite",
+    title: "Deluxe Ocean View Suite - Marina Bay Hotel",
+    description:
+      "Spacious suite with panoramic ocean views, king-size bed, marble bathroom, and private balcony. Perfect for romantic getaways and special occasions.",
+    price: 450,
+    category: "Hotel",
+    brand: "Marina Bay Hotel",
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-20T08:30:00Z",
+    roomType: "Suite",
+    amenities: [
+      "Ocean View",
+      "Private Balcony",
+      "King Bed",
+      "Marble Bathroom",
+      "Mini Bar",
+      "Room Service",
+      "Free WiFi",
+      "Air Conditioning",
+    ],
+    maxGuests: 2,
+    size: "65 sqm",
+    bedrooms: 1,
+    bathrooms: 1,
+    location: "Dubai Marina, UAE",
+    checkIn: "15:00",
+    checkOut: "12:00",
+    cancellation: "Free cancellation until 24 hours before check-in",
+    hotelRating: 5,
+    distanceFromAirport: "25 km",
+    nearbyAttractions: ["Dubai Marina Walk", "JBR Beach", "Dubai Mall"],
+  },
+  {
+    id: 8,
+    name: "Standard City Room",
+    title: "Standard City Room - Downtown Plaza",
+    description:
+      "Comfortable and modern room in the heart of the city. Features city views, queen bed, and all essential amenities for business and leisure travelers.",
+    price: 120,
+    category: "Hotel",
+    brand: "Downtown Plaza",
+    rating: 4.3,
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-19T12:15:00Z",
+    roomType: "Standard",
+    amenities: [
+      "City View",
+      "Queen Bed",
+      "Free WiFi",
+      "Air Conditioning",
+      "Work Desk",
+      "Flat Screen TV",
+      "Coffee Machine",
+      "Safe",
+    ],
+    maxGuests: 2,
+    size: "25 sqm",
+    bedrooms: 1,
+    bathrooms: 1,
+    location: "Downtown Dubai, UAE",
+    checkIn: "14:00",
+    checkOut: "11:00",
+    cancellation: "Free cancellation until 48 hours before check-in",
+    hotelRating: 4,
+    distanceFromAirport: "15 km",
+    nearbyAttractions: ["Burj Khalifa", "Dubai Mall", "Dubai Fountain"],
+  },
+  {
+    id: 9,
+    name: "Presidential Suite",
+    title: "Presidential Suite - Grand Palace Hotel",
+    description:
+      "Ultimate luxury experience with separate living and dining areas, butler service, and exclusive access to hotel amenities. The pinnacle of hospitality.",
+    price: 1200,
+    category: "Hotel",
+    brand: "Grand Palace Hotel",
+    rating: 4.9,
+    image:
+      "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-21T15:45:00Z",
+    roomType: "Presidential",
+    amenities: [
+      "Butler Service",
+      "Separate Living Room",
+      "Dining Area",
+      "Jacuzzi",
+      "Private Elevator",
+      "Wine Cellar",
+      "Private Chef",
+      "24/7 Concierge",
+    ],
+    maxGuests: 4,
+    size: "120 sqm",
+    bedrooms: 2,
+    bathrooms: 2,
+    location: "Palm Jumeirah, Dubai, UAE",
+    checkIn: "15:00",
+    checkOut: "12:00",
+    cancellation: "Free cancellation until 72 hours before check-in",
+    hotelRating: 5,
+    distanceFromAirport: "35 km",
+    nearbyAttractions: [
+      "Palm Jumeirah",
+      "Atlantis The Palm",
+      "Aquaventure Waterpark",
+    ],
+  },
+  {
+    id: 10,
+    name: "Family Connecting Rooms",
+    title: "Family Connecting Rooms - Resort Paradise",
+    description:
+      "Two connecting rooms perfect for families. Each room has two queen beds, private bathrooms, and shared living space. Ideal for family vacations.",
+    price: 280,
+    category: "Hotel",
+    brand: "Resort Paradise",
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-22T10:20:00Z",
+    roomType: "Family",
+    amenities: [
+      "Connecting Rooms",
+      "4 Queen Beds",
+      "2 Bathrooms",
+      "Shared Living Space",
+      "Kids' Activities",
+      "Kitchenette",
+      "Balcony",
+      "Free WiFi",
+    ],
+    maxGuests: 8,
+    size: "60 sqm",
+    bedrooms: 2,
+    bathrooms: 2,
+    location: "Jumeirah Beach, Dubai, UAE",
+    checkIn: "15:00",
+    checkOut: "11:00",
+    cancellation: "Free cancellation until 48 hours before check-in",
+    hotelRating: 4,
+    distanceFromAirport: "20 km",
+    nearbyAttractions: [
+      "Jumeirah Beach",
+      "Wild Wadi Waterpark",
+      "Souk Madinat Jumeirah",
+    ],
+  },
+  {
+    id: 11,
+    name: "Business Executive Room",
+    title: "Business Executive Room - Corporate Tower",
+    description:
+      "Designed for business travelers with ergonomic workspace, high-speed internet, and access to business center. Located in the financial district.",
+    price: 180,
+    category: "Hotel",
+    brand: "Corporate Tower",
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-23T09:30:00Z",
+    roomType: "Executive",
+    amenities: [
+      "Ergonomic Workspace",
+      "High-Speed WiFi",
+      "Business Center Access",
+      "24/7 Room Service",
+      "City View",
+      "Printer/Scanner",
+      "Meeting Room Access",
+      "Express Check-in/out",
+    ],
+    maxGuests: 2,
+    size: "35 sqm",
+    bedrooms: 1,
+    bathrooms: 1,
+    location: "DIFC, Dubai, UAE",
+    checkIn: "14:00",
+    checkOut: "12:00",
+    cancellation: "Free cancellation until 24 hours before check-in",
+    hotelRating: 4,
+    distanceFromAirport: "12 km",
+    nearbyAttractions: ["DIFC", "Dubai Mall", "Burj Khalifa", "Dubai Opera"],
+  },
+  {
+    id: 12,
+    name: "Garden Villa",
+    title: "Garden Villa - Tropical Resort",
+    description:
+      "Private villa surrounded by lush gardens with outdoor terrace, private pool, and direct beach access. Perfect for honeymooners and couples.",
+    price: 650,
+    category: "Hotel",
+    brand: "Tropical Resort",
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-24T14:00:00Z",
+    roomType: "Villa",
+    amenities: [
+      "Private Pool",
+      "Garden View",
+      "Outdoor Terrace",
+      "Beach Access",
+      "Kitchenette",
+      "Private Garden",
+      "Outdoor Shower",
+      "BBQ Area",
+    ],
+    maxGuests: 2,
+    size: "80 sqm",
+    bedrooms: 1,
+    bathrooms: 1,
+    location: "Ras Al Khaimah, UAE",
+    checkIn: "15:00",
+    checkOut: "11:00",
+    cancellation: "Free cancellation until 48 hours before check-in",
+    hotelRating: 5,
+    distanceFromAirport: "45 km",
+    nearbyAttractions: [
+      "Jebel Jais",
+      "Al Marjan Island",
+      "Ras Al Khaimah Beach",
+    ],
+  },
+  {
+    id: 13,
+    name: "Budget Twin Room",
+    title: "Budget Twin Room - Backpacker's Inn",
+    description:
+      "Affordable accommodation with two single beds, shared bathroom, and common areas. Perfect for budget-conscious travelers and backpackers.",
+    price: 45,
+    category: "Hotel",
+    brand: "Backpacker's Inn",
+    rating: 4.1,
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-25T11:45:00Z",
+    roomType: "Budget",
+    amenities: [
+      "2 Single Beds",
+      "Shared Bathroom",
+      "Common Kitchen",
+      "Free WiFi",
+      "Luggage Storage",
+      "Common Lounge",
+      "Laundry Facilities",
+      "Tour Desk",
+    ],
+    maxGuests: 2,
+    size: "15 sqm",
+    bedrooms: 1,
+    bathrooms: 0,
+    location: "Deira, Dubai, UAE",
+    checkIn: "14:00",
+    checkOut: "11:00",
+    cancellation: "Free cancellation until 24 hours before check-in",
+    hotelRating: 2,
+    distanceFromAirport: "8 km",
+    nearbyAttractions: [
+      "Gold Souk",
+      "Spice Souk",
+      "Dubai Creek",
+      "Al Fahidi Historical Neighbourhood",
+    ],
+  },
+  {
+    id: 14,
+    name: "Penthouse Suite",
+    title: "Penthouse Suite - Skyline Tower",
+    description:
+      "Exclusive penthouse with 360-degree city views, private rooftop terrace, and premium amenities. The ultimate urban luxury experience.",
+    price: 850,
+    category: "Hotel",
+    brand: "Skyline Tower",
+    rating: 4.9,
+    image:
+      "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ],
+    created_at: "2024-01-26T16:30:00Z",
+    roomType: "Penthouse",
+    amenities: [
+      "360° City Views",
+      "Private Rooftop",
+      "Wine Cellar",
+      "Personal Concierge",
+      "Helicopter Access",
+      "Private Elevator",
+      "Home Theater",
+      "Private Chef",
+    ],
+    maxGuests: 4,
+    size: "150 sqm",
+    bedrooms: 2,
+    bathrooms: 2,
+    location: "Downtown Dubai, UAE",
+    checkIn: "15:00",
+    checkOut: "12:00",
+    cancellation: "Free cancellation until 72 hours before check-in",
+    hotelRating: 5,
+    distanceFromAirport: "15 km",
+    nearbyAttractions: [
+      "Burj Khalifa",
+      "Dubai Mall",
+      "Dubai Fountain",
+      "Dubai Opera",
+      "Dubai Aquarium",
+    ],
+  },
+];
+
+// Helper function to get products by category
+export const getProductsByCategory = (category) => {
+  if (!category || category === "All") {
+    return sampleProducts;
+  }
+  return sampleProducts.filter((product) => product.category === category);
+};
+
+// Helper function to search products
+export const searchProducts = (query) => {
+  if (!query) {
+    return sampleProducts;
+  }
+  const lowercaseQuery = query.toLowerCase();
+  return sampleProducts.filter(
+    (product) =>
+      product.name.toLowerCase().includes(lowercaseQuery) ||
+      product.description.toLowerCase().includes(lowercaseQuery) ||
+      product.category.toLowerCase().includes(lowercaseQuery)
+  );
+};

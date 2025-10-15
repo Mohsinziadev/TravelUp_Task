@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+/* @import "../components/SliderView/SliderView.css"; */
+
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("../styles/fonts/TTFirsNeue-Thin.ttf")format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("../styles/fonts/TTFirsNeue-Light.ttf")format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("../styles/fonts/TTFirsNeue-Regular.ttf")format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("../styles/fonts/TTFirsNeue-Bold.ttf")format("truetype");
+  font-weight: 700;
+}
+
+
+
+body {
+  @apply leading-[normal] m-0;
+  font-family: "TT Firs Neue" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
